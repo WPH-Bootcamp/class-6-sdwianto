@@ -3,17 +3,15 @@
 
 // @function get-color($type, $level)
 
-@function get-color($type, $level) 
-{
+@function get-color($type, $level) {
   // $level :"#{$level}";
-  @if map.has-key($colors, $type) 
-  {
-    $type-map: map.get($colors, $type); 
-    @if map.has-key($type-map, $level) 
-    {
-      @return map.get($type-map, $level); 
+  @if map.has-key($colors, $type) {
+    $type-map: map.get($colors, $type);
+    @if map.has-key($type-map, $level) {
+      @return map.get($type-map, $level);
     }
+  } @else {
+    @warn 'Invalid color type or level:type=#{$type}, level=#{$level}';
+    @return null;
   }
-  @warn "Invalid color type or level:type=#{$type}, level=#{$level}";
-  @return null;
 }
