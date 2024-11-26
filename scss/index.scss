@@ -3,7 +3,7 @@
 @use 'mixins' as *;
 
 .title {
-  @include typography ('display-lg', 'bold');
+  @include typography('display-lg', 'bold');
 }
 
 .title-1 {
@@ -20,12 +20,8 @@
 
 .title-4 {
   color: get-color('Success', '700');
-
 }
 
 .title-5 {
   color: get-color('Gray', '600');
-
 }
-
-
